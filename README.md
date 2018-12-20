@@ -81,3 +81,13 @@ renderer.setSymbol(sym)
 layer3.triggerRepaint()
 iface.layerTreeView().refreshLayerSymbology(layer3.id())
 ```
+
+## Results and Conclusion
+
+From these maps, it can be clearly seen that health inequalities exist in large geographic swaths in the United States. While the two factors in this study often dont overlap, there are many zones where they exist in the same place. While a lack of convenient medical treatment is obviously not the only factor contributing to poor life expectancy for much of the rural United States, it is very likely a contributing factor. It is also not outside the realm of possibility that there are other confounding variables, such as average income, race, or occupation that has an affect on  these variables.
+
+## Links to Data
+https://catalog.data.gov/dataset/community-health-status-indicators-chsi-to-combat-obesity-heart-disease-and-cancer
+https://hifld-geoplatform.opendata.arcgis.com/datasets/a2817bf9632a43f5ad1c6b0c153b0fab_0
+https://healthinequality.org/data/
+https://www.census.gov/geo/maps-data/data/tiger.html
