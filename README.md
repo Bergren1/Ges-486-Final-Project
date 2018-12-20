@@ -42,4 +42,42 @@ Finally, I wanted to know what counties in the US were underserved by county acc
 Here is my code:
 
 '''Python
-
+#Adding counties with number of people per hospital
+layer1 = QgsVectorLayer('A:/UMBC/Senior/GES486/FinalProject/Products/CountiesHOSPERPERS.shp','county','ogr')
+layer1.isValid()
+True
+QgsProject.instance().addMapLayer(layer1)
+<qgis._core.QgsVectorLayer object at 0x000001DB8068F5E8>
+#Selecting counties with above average number of people served by each hospital
+layer1 = iface.activeLayer()
+layer1.selectByExpression("HosPerPers > 25446")
+QgsVectorFileWriter.writeAsVectorFormat(layer1, r'A:/UMBC/Senior/GES486/FinalProject/Products/AboveAvPPH.gpkg', 'utf-8', layer1.crs(),'GPKG', True)
+(0, '')
+layer2 = QgsVectorLayer('A:/UMBC/Senior/GES486/FinalProject/Products/AboveAvPPH.gpkg','AbovAvPPH','ogr')
+layer2.isValid()
+True
+QgsProject.instance().addMapLayer(layer2)
+<qgis._core.QgsVectorLayer object at 0x000001DB80696F78>
+#Repainting areas with poorer than average people per hospital to red
+sym = QgsFillSymbol.createSimple({'color_expression':'Dif','color':'red'})
+renderer = layer2.renderer()
+renderer.setSymbol(sym)
+layer2.triggerRepaint()
+iface.layerTreeView().refreshLayerSymbology(layer2.id())
+#Selecting counties with Below average number of people served by each hospital
+layer1 = iface.activeLayer()
+layer1.selectByExpression("HosPerPers < 25446")
+QgsVectorFileWriter.writeAsVectorFormat(layer1, r'A:/UMBC/Senior/GES486/FinalProject/Products/BelowAvPPH.gpkg', 'utf-8', layer1.crs(),'GPKG', True)
+(0, '')
+layer3 = QgsVectorLayer('A:/UMBC/Senior/GES486/FinalProject/Products/BelowAvPPH.gpkg','AbovAvPPH','ogr')
+layer3.isValid()
+True
+QgsProject.instance().addMapLayer(layer3)
+<qgis._core.QgsVectorLayer object at 0x000001DB806A3B88>
+#Repainting areas with better than average people per hospital to blue
+sym = QgsFillSymbol.createSimple({'color_expression':'Dif','color':'blue'})
+renderer = layer3.renderer()
+renderer.setSymbol(sym)
+layer3.triggerRepaint()
+iface.layerTreeView().refreshLayerSymbology(layer3.id())
+'''
