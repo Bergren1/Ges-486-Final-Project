@@ -18,9 +18,14 @@ Next, I chose to create a cloropleth of hospitals normalized to population. This
 
 ![magmapph](https://user-images.githubusercontent.com/42807663/50255390-a85fd380-03bf-11e9-86fc-76fba8493e7b.jpg)
 
-I was also aware that often times people travel beyond county and state boundries to recieve healthcare, so I created a simple hex map with 150 mile cells showing hospital distribution in the lower 48 states.
+I was also aware that often times people travel beyond county and state boundries to recieve healthcare, so I created a simple hex map with 150 mile cells showing hospital distribution in the lower 48 states. Each Hexagon is 150 miles
 
 ![hexmap](https://user-images.githubusercontent.com/42807663/50255386-a433b600-03bf-11e9-8073-67d4ebf6d768.jpg)
+
+*As a bonus, here are 3D maps that utilize the hospitals in the area as elevation.*
+
+![yay](https://user-images.githubusercontent.com/42807663/50265505-f7bcf880-03ed-11e9-80ea-05e392fb45f7.png)
+![yay4](https://user-images.githubusercontent.com/42807663/50265506-f7bcf880-03ed-11e9-9084-8b922bdf6b5d.png)
 
 In addition to understanding general trends of health inequalities across the United States, I was also interested in knowing whether clusters of high or low life expectancy and hospital access existed to see if there were larger groups of underserved 
 
