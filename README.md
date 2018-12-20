@@ -41,7 +41,8 @@ Finally, I wanted to know what counties in the US were underserved by county acc
 
 Here is my code:
 
-'''Python
+'''python
+
 #Adding counties with number of people per hospital
 layer1 = QgsVectorLayer('A:/UMBC/Senior/GES486/FinalProject/Products/CountiesHOSPERPERS.shp','county','ogr')
 layer1.isValid()
@@ -80,4 +81,5 @@ renderer = layer3.renderer()
 renderer.setSymbol(sym)
 layer3.triggerRepaint()
 iface.layerTreeView().refreshLayerSymbology(layer3.id())
+
 '''
